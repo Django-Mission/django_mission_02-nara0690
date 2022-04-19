@@ -25,4 +25,4 @@ class Faq(models.Model):
     writer = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name= 'writer', null=True, blank=True, verbose_name='생성자')
     created_at = models.DateTimeField(verbose_name='생성일시', auto_now_add=True)
     last_modifier = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='last_modifier', null=True, blank=True, verbose_name='최종 수정자')
-    modify_time = models.DateTimeField(verbose_name='최중 수정일시', auto_now_add=True)
+    modify_time = models.DateTimeField(verbose_name='최종 수정일시', auto_now_add=True)
